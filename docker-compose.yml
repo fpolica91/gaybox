@@ -1,0 +1,15 @@
+services:
+  netbox:
+    image: postgres:latest
+    container_name: netbox
+    environment:
+      POSTGRES_DB: netbox
+      POSTGRES_USER: netbox
+      POSTGRES_PASSWORD: J5brHrAXFLQSif0K
+    ports:
+      - '5432:5432'
+  redis:
+    image: redis:latest
+    container_name: netbox_redis
+    ports:
+      - '6379:6379'
